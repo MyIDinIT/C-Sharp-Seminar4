@@ -3,14 +3,17 @@
 // 4 -> 24
 // 5 -> 120
 
-
-Console.WriteLine("Введите число");
-int a=Convert.ToInt32(Console.ReadLine());
-int count=1;
-int Production=1;
-while (count<=a)
+int Prod(int a)
 {
-    Production *=count;
-    count++;
+    int count=1;
+    int Production=1;
+    while (count<=a)
+    {
+        Production *=count;
+        count++;
+    }
+    return Production;
 }
-Console.WriteLine(Production);
+Console.WriteLine("Введите число");
+int num=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(Prod(num));
